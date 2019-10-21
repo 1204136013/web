@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>chat</title>
+    </head>
+    <body>
+        <h1>chat</h1>
+        <form action="{{ url_for('.enter') }}" method="POST">
+            <input type=text name="name" placeholder="昵称">
+            <button>进入聊天室</button>
+        </form>
+    </body>
+</html>

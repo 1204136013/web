@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="zh_CN" class="desktop-view not-mobile-device   js no-touch discourse-no-touch" style="">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>{{ topic.title }}</title>
+  <meta name="description" content="nothing">
+  <meta name="discourse_theme_key" content="b5b4821c-3a91-43a3-96a2-a496ce5d8392">
+  <meta name="author" content="">
+  <meta name="generator"
+    content="Discourse 1.9.0.beta10 - https://github.com/discourse/discourse version e582e86da30b1832baca9b9f3a32b4b00b23ed5d">
+  
+
+  
+  <!-- 我的高亮 -->
+  <link href="//cdn.bootcss.com/prism/1.8.0/themes/prism.css" rel="stylesheet">
+
+  <link rel="shortcut icon" href="{{ url_for('index.image', filename='favicon.ico') }}">
+
+  <meta name="theme-color" content="#ffffff">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+
+
+  <meta name="csrf-param" content="authenticity_token">
+  <meta name="csrf-token"
+    content="82BqHQBh35h4OMwUav1qgJJvaxPcIAHOs3quMQqs/xnoHqr1ZBaxI+JaiHvuBk9mGK7cwNL6yqJKNwcCf/AeWg==">
+
+  <meta name="fragment" content="!">
+
+
+
+
+
+
+
+
+
+
+  <link href="/static/css/desktop_02b53774ef38870107942da06a1a36cf8378de13.css" media="all"
+    rel="stylesheet" data-target="desktop">
+
+
+  <link href="/static/css/desktop_theme_2_ea05f8399b16270b58b6b9c77e161d088b1f4e12.css"
+    media="all" rel="stylesheet" data-target="desktop_theme">
+
+
+
+  <link rel="preload"
+    href="http://liulishe.me/assets/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2?http://liulishe.me&amp;2&amp;v=4.7.0"
+    as="font" type="font/woff2" crossorigin="">
+  <style>
+    @font-face {
+      font-family: 'FontAwesome';
+      src: url('/assets/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2?http://liulishe.me&2&v=4.7.0') format('woff2'),
+        url('/assets/fontawesome-webfont-ba0c59deb5450f5cb41b3f93609ee2d0d995415877ddfa223e8a8a7533474f07.woff?http://liulishe.me&amp;2&v=4.7.0') format('woff');
+    }
+  </style>
+
+
+  <meta name="twitter:card" content="summary">
+
+
+
+  <style id="image-sizing-hack">
+    #reply-control .d-editor-preview img:not(.thumbnail),
+    .cooked img:not(.thumbnail) {
+      max-width: 690px;
+      max-height: 500px;
+    }
+  </style>
+</head>
+
+<body class="docked archetype-regular category-1">
+
+
+  <div class="debug-eyeline"></div>
+
+
+  <section id="main" class="ember-application">
+    <div id="ember675" class="ember-view"><span id="ember707" class="ember-view">
+        <!----></span>
+      <div id="ember719" class="ember-view">
+        <header class="d-header clearfix">
+          <div class="wrap">
+            <div class="contents clearfix">
+                <div class="title">
+                    <a href="{{ url_for('index.index') }}" data-auto-route="true">
+                      <img src="/static/img/toplogo.png"
+                        alt="nothing" id="site-logo" class="logo-big">
+                      </a>
+                    </div>
+                  <div class="panel clearfix"><span class="header-buttons"></span>
+                <ul role="navigation" class="icons d-header-icons clearfix">
+                        
+                  <li id="current-user" class="header-dropdown-toggle current-user">
+                    <a
+                      href="{{ url_for('index.user_detail', name=user.username) }}" data-auto-route="true" class="icon">
+                      <div><img alt="" width="32" height="32"
+                          src="{{ user.image }}"
+                          title="{{ user.username }}" class="avatar"></div>
+                    </a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+      <span id="ember720" class="ember-view">
+        <!----></span>
+
+      <div id="main-outlet" class="wrap" style="padding-bottom: 367px;">
+        <div class="container">
+          <div id="ember725" class="ember-view"></div>
+          <div id="ember731" class="ember-view"></div>
+          <div id="ember734" class="hidden create-topics-notice ember-view">
+            <!---->
+          </div>
+        </div>
+        <div id="ember1228" class="regular category-1 ember-view">
+          <div id="ember1229" class="ember-view"></div>
+          <div class="container">
+            <div id="ember1230" class="ember-view">
+              <div class="row">
+                  <div id="banner">
+                      <div id="banner-content">
+                        <p>1、文明发言,聊天灌水讨论分析热烈欢迎；</p>
+                        <p>2、目前还在测试中，有什么BUG或者建议，请发帖告诉我</p>
+                        <!---->
+                      </div>
+                    </div>
+                    </div>
+            </div>
+          </div>
+
+          <span id="ember1232" class="ember-view">
+            <!----></span>
+
+          <div id="topic-title" class="ember-view">
+            <div class="container">
+              <div class="title-wrapper">
+                <h1>
+                  <a href="">
+                    <span class="private-message-glyph"><i class="fa fa-envelope d-icon d-icon-envelope"></i></span>
+                  </a>
+
+                  <div id="ember1239" class="topic-statuses ember-view"></div>
+                  <a href="" class="fancy-title" data-ember-action=""
+                    data-ember-action-1240="1240">
+                    {{ topic.title }}
+                  </a>
+
+                  <!---->
+                </h1>
+
+                <div id="ember1241" class="topic-category ember-view">
+                  <!---->
+                  <div class="topic-header-extra">
+                    <!---->
+                    <!---->
+                  </div>
+                  <span id="ember1242" class="ember-view">
+                    <!----></span>
+                </div>
+
+              </div>
+              <span id="ember1243" class="ember-view">
+                <!----></span>
+            </div>
+          </div>
+          <div class="container posts">
+            <div class="selected-posts hidden">
+              <p><span id="ember1244" class="ember-view">已选择 <b>0</b> 个帖子。</span></p>
+
+              <p><a href="" data-ember-action="" data-ember-action-1245="1245">全选</a>
+              </p>
+
+              <!---->
+              <!---->
+              <!---->
+              <!---->
+              <!---->
+              <!---->
+              <p class="cancel"><a href="" data-ember-action=""
+                  data-ember-action-1246="1246">取消选择</a></p>
+
+            </div>
+
+            <div id="ember1247" class="ember-view">
+              <!---->
+              <div id="ember1530" class="ember-view">
+                <div style="top: 284px" class="timeline-container timeline-docked">
+                  <div class="topic-timeline">
+                    <div class="timeline-controls"></div>
+                    <div class="timeline-scrollarea-wrapper">
+                      <div class="timeline-date-wrapper">
+                        </div>
+                      <div style="height: 300px" class="timeline-scrollarea">
+                        <div style="height: 0px" class="timeline-padding"></div>
+                        <div style="height: 50px" class="timeline-scroller">
+                          <div class="timeline-scroller-content">
+                          </div>
+                        </div>
+                        <div style="height: 250px" class="timeline-padding"></div>
+                        <div style="height: 20px; top: 41px" class="timeline-last-read">
+                          </div>
+                      </div>
+                      <div class="timeline-date-wrapper">
+                        </div>
+                    </div>
+                    <div class="timeline-footer-controls">
+                      <div style="display: inline-block;" class="widget-component-connector">
+                        <div id="ember1531" class="topic-notifications-button ember-view">
+                          <div id="ember1532"
+                            class="select-box dropdown-select-box notifications-button topic-notifications-options ember-view">
+                            <input type="text" aria-haspopup="true" role="button"
+                              aria-labelledby="select-box-input-ember1532" tabindex="0" class="select-box-offscreen">
+
+                            <div id="ember1533" class="select-box-header dropdown-header ember-view">
+                            </div>
+
+                            <div class="select-box-body">
+                              <!---->
+                            </div>
+
+                            <!---->
+                          </div>
+
+                          <!---->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="row">
+              <section id="topic" data-topic-id="13782" class="topic-area">
+
+                <div class="posts-wrapper">
+                  <div id="ember1248" class="ember-view">
+                  </div>
+
+                  <span id="ember1249" class="ember-view">
+                    <!----></span>
+
+                  <div id="ember1250" class="ember-view">
+                    <div class="post-stream">
+                      <div class="topic-post clearfix topic-owner regular" id="" style="min-height: 466px">
+                        <article id="post_1" data-post-id="24383" data-user-id="16150" class="boxed onscreen-post"><a
+                            href="" class="tabLoc"></a>
+                          <div class="row">
+                            <div class="topic-avatar">
+                              <a class="trigger-user-card main-avatar"
+                                href="{{ url_for('index.user_detail', name=topic.user().username) }}" data-user-card="刘川枫man">
+                                <img
+                                  alt="" width="45" height="45" src="{{ topic.user().image }}"
+                                  title="{{ topic.user().username }}" class="avatar">
+                              </a>
+                              <div class="poster-avatar-extra"></div>
+                            </div>
+                            <div class="topic-body clearfix">
+                              <div class="topic-meta-data">
+                                <div class="names trigger-user-card">
+                                  <span class="first username">
+                                    <a href="{{ url_for('index.user_detail', name=topic.user().username) }}"
+                                    data-user-card="man">{{ topic.user().username }}</a>
+                                  </span>
+                                </div>
+                                <div class="post-info"><a class="post-date"
+                                    href=""
+                                    data-share-url="/t/topic/13782?u=four22nd6" data-post-number="1"><span
+                                      title="2019年1月29日 00:19" data-time="1548692358375" data-format="tiny"
+                                      class="relative-date">发布于 {{ topic.created_time | format_time }}</span></a></div>
+                                <div class="read-state read" title="未读帖子"><i class="fa fa-circle d-icon d-icon-circle"
+                                    aria-hidden="true"></i></div>
+                              </div>
+                              <div class="regular contents ">
+                                <div class="cooked">
+                                  <p class= "markdown-text">{{ topic.content }}</p>
+                                </div>
+                                <section class="post-menu-area clearfix">
+                                  <nav class="post-controls clearfix"><button
+                                      class="widget-button btn-flat show-replies btn-icon-text" aria-label="3 回复"
+                                      title="{{ topic.replies() | count }} 回复"><span class="d-button-label"> {{ topic.replies() | count }} 回复</span>
+                                        ></button>
+                                    <div class="actions"><button
+                                        class="widget-button btn-flat like-count highlight-action btn-text"
+                                        aria-label="28 人赞了该贴" title="28 人赞了该贴"> {{ topic.views }} 次浏览</button>
+                                        <button class="widget-button btn-flat toggle-like like no-text btn-icon" aria-label="赞一下此帖" title="删除">
+                                          <!-- <i class="fa fa-heart d-icon d-icon-heart"
+                                          aria-hidden="true"></i> -->
+                                          <a href="{{ url_for('422_topic.delete', id=topic.id, token=token,user=topic.user().username) }}">
+                                            点击删除帖子
+                                          </a>
+                                        </button>
+                                          <button
+                                        class="widget-button btn-flat bookmark no-text btn-icon"
+                                        aria-label="你已经阅读过此帖；点击收藏" title="Biu">
+                                        <!-- <i
+                                          class="fa fa-bookmark d-icon d-icon-bookmark"
+                                          aria-hidden="true"></i> -->
+                                          Biu
+                                        </button>
+                                          <button onMousedown='showhidediv("reply-control")';
+                                        class="widget-button btn-flat reply create fade-out btn-icon-text"
+                                        aria-label="开始撰写本帖的回复" title="开始撰写本帖的回复">
+                                        <span
+                                          class="d-button-label">点击回复帖子</span>
+                                        </button>
+                                      </div>
+                                  </nav>
+                                </section>
+                              </div>
+                              <section class="post-actions"></section>
+                              <div class="post-links-container"></div>
+                            </div>
+                          </div>
+                        </article>
+                      </div>
+
+                      {% for r in topic.replies() %}
+                          {% set u = r.user() %}
+                      <div class="topic-post clearfix regular" id="" style="min-height: 164px">
+                        <article id="post_2" data-post-id="24458" data-user-id="27400" class="boxed onscreen-post"><a
+                            href="" class="tabLoc"></a>
+                          <div class="row">
+                            <div class="topic-avatar"><a class="trigger-user-card main-avatar"
+                                href="{{ url_for('index.user_detail', name=u.username) }}" data-user-card="2064962124"><img alt=""
+                                  width="45" height="45"
+                                  src="{{ u.image }}"
+                                  title="{{ u.username }}" class="avatar"></a>
+                              <div class="poster-avatar-extra"></div>
+                            </div>
+                            <div class="topic-body clearfix">
+                              <div class="topic-meta-data">
+                                <div class="names trigger-user-card"><span class="first username">
+                                    </span><span class="second full-name"><a
+                                      href=" {{ url_for('index.user_detail', name=u.username) }} " data-user-card="2064962124"> {{ u.username }}</a></span>
+                                </div>
+                                <div class="post-info"><a class="post-date"
+                                    href=""
+                                    data-share-url="/t/topic/13782/2?u=four22nd6" data-post-number="2"><span
+                                      title="2019年1月31日 00:18" data-time="1548865122821" data-format="tiny"
+                                      class="relative-date">发布于 {{ r.created_time | format_time }}</span></a></div>
+                                <div class="read-state read" title="未读帖子"><i class="fa fa-circle d-icon d-icon-circle"
+                                    aria-hidden="true"></i></div>
+                              </div>
+                              <div class="regular contents">
+                                <div class="cooked ">
+                                  <p class="markdown-text">{{ r.content }}</p>
+                                </div>
+                                <section class="post-menu-area clearfix">
+                                  <nav class="post-controls clearfix">
+                                    <div class="actions">
+                                      <button
+                                        class="widget-button btn-flat toggle-like like no-text btn-icon"
+                                        aria-label="赞一下此帖" title="Biu">
+                                        <!-- <i class="fa fa-heart d-icon d-icon-heart"
+                                          aria-hidden="true"></i> -->
+                                          Biu
+                                        </button>
+                                        <button
+                                        class="widget-button btn-flat share no-text btn-icon" aria-label="分享指向这个帖子的链接"
+                                        title="Biu" data-share-url="/t/topic/13782/2?u=four22nd6"
+                                        data-post-number="2">
+                                        <!-- <i class="fa fa-link d-icon d-icon-link"
+                                          aria-hidden="true"></i> -->
+                                          Biu
+                                        </button>
+                                        <button
+                                        class="widget-button btn-flat bookmark no-text btn-icon"
+                                        aria-label="你已经阅读过此帖；点击收藏" title="Biu">
+                                        <!-- <i
+                                          class="fa fa-bookmark d-icon d-icon-bookmark"
+                                          aria-hidden="true"></i> -->
+                                          Biu
+                                        </button>
+                                      </div>
+                                  </nav>
+                                </section>
+                              </div>
+                              <section class="post-actions"></section>
+                              <div class="post-links-container"></div>
+                            </div>
+                          </div>
+                        </article>
+                      </div>
+                      {% endfor %}
+
+                    </div>
+                  </div>
+
+                  <div id="ember1251" class="ember-view">
+                  </div>
+                </div>
+                <div id="topic-bottom"></div>
+
+                <div id="ember1252" class="ember-view">
+                  <!---->
+                </div>
+              </section>
+            </div>
+
+          </div>
+
+          <div id="share-link" class="ember-view">
+            <h3>分享指向这个主题的链接</h3>
+
+            <!---->
+            <div>
+              <input type="text">
+              <div class="share-for-touch">
+                <div class="overflow-ellipsis"><a></a></div>
+              </div>
+            </div>
+
+            <div id="ember1234" class="social-link ember-view"><a href=""
+                title="在电子邮件里发送该链接" aria-label="在电子邮件里发送该链接" data-ember-action="" data-ember-action-1235="1235">
+                <i class="fa fa-envelope-square d-icon d-icon-envelope-square"></i>
+              </a>
+            </div>
+
+            <!---->
+            <div class="link">
+              <a href="" aria-label="关闭" title="关闭" class="close-share"
+                data-ember-action="" data-ember-action-1236="1236"><i class="fa fa-close d-icon d-icon-close"></i></a>
+            </div>
+          </div>
+
+          <div id="ember1237" class="quote-button ember-view">引用
+          </div>
+        </div>
+        <div id="user-card" class="show-badges no-bg ember-view">
+          <!---->
+        </div>
+
+      </div>
+
+      <span id="ember918" class="ember-view">
+        <!----></span>
+      <!----><span id="ember919" class="ember-view">
+        <!----></span>
+
+      <div data-keyboard="false" id="discourse-modal" class="hidden modal d-modal fixed-modal ember-view">
+        <div class="modal-outer-container">
+          <div class="modal-middle-container">
+            <div class="modal-inner-container">
+              <div class="modal-header">
+                <div class="modal-close">
+                  <a class="close" data-ember-action="" data-ember-action-926="926"><i
+                      class="fa fa-times d-icon d-icon-times"></i></a>
+                </div>
+
+                <h3></h3>
+              </div>
+
+              <div id="modal-alert"></div>
+
+
+              <div id="ember952" class="ember-view"></div>
+
+
+
+
+              <!---->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="topic-entrance" class="hidden ember-view"><button id="ember929"
+          class="full jump-top btn no-text ember-view">
+          <!---->
+          <!---->
+          <i class="fa fa-caret-up d-icon d-icon-caret-up"></i> Invalid date
+
+        </button>
+        <button id="ember930" class="full jump-button btn no-text ember-view">
+          <!---->
+          <!---->
+          Invalid date <i class="fa fa-caret-down d-icon d-icon-caret-down"></i>
+
+        </button></div>
+      <div  style="display:none;" id="reply-control" class="open ember-view" style="height: 367px;">
+        <div class="grippie"></div>
+        <div class="contents">
+
+          <div id="ember1535" class="hidden popup-menu ember-view">
+            <h3>选项</h3>
+            <ul>
+              <!---->
+              <!---->
+              <li>
+                <button title="Hide Details" id="ember1539" class="btn btn-icon-text ember-view"> <i
+                    class="fa fa-caret-right d-icon d-icon-caret-right"></i>
+
+                  <span class="d-button-label">Hide Details</span>
+
+
+                </button>
+              </li>
+              <li>
+                <button title="创建投票" id="ember1541" class="btn btn-icon-text ember-view"> <i
+                    class="fa fa-bar-chart-o d-icon d-icon-bar-chart-o"></i>
+
+                  <span class="d-button-label">创建投票</span>
+
+
+                </button>
+              </li>
+
+            </ul>
+          </div>
+          <div id="ember1542" class="composer-popup-container ember-view">
+            <!---->
+          </div>
+
+          <div class="control">
+            <!---->
+            <button onMousedown='showhidediv("reply-control")' title="隐藏或显示编辑面板" id="ember1544" class="toggler btn-flat ember-view " >
+              <span class = "d-button-label">返回</span>
+            </button>
+
+
+            <div class="control-row reply-area">
+              <div class="composer-fields">
+                <span id="ember1545" class="ember-view">
+                  <!----></span>
+
+                <div class="reply-to">
+                 
+                  <!---->
+                  <!---->
+                </div>
+
+                <!----> <span id="ember1546" class="ember-view">
+                  <div id="ember1547" class="composer-fields-outlet presence ember-view">
+                    <div id="ember1548" class="ember-view">
+                      <!---->
+                    </div>
+                  </div>
+                </span>
+              </div>
+              <div>
+              <form action="{{ url_for('422_reply.add') }}" method="post">
+
+              <div id="ember1549" class="wmd-controls toolbar-visible wmd-controls show-preview ember-view"
+                style="top: 41px; bottom: 45px;">
+                <div id="ember1550" class="d-editor ember-view">
+                  <div class="d-editor-overlay hidden"></div>
+                  <div class="d-editor-container">
+                    <div class="d-editor-textarea-wrapper">
+                        <input type="hidden" name="topic_id" value="{{ topic.id }}">
+                      <textarea name="content" tabindex="4" placeholder="在此键入，请使用markdown格式。" id="ember1586"
+                        class="d-editor-input ember-text-area ember-view"></textarea>
+                      <div id="ember1587" class="popup-tip bad hide ember-view"><span class="close"><i
+                            class="fa fa-times-circle d-icon d-icon-times-circle"></i></span>帖子不能为空</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="submit-panel">
+                <button tabindex="5" title="或 Ctrl + 回车" id="ember1592"
+                  class="btn btn-icon-text btn-primary create ember-view"> 
+                  <span class="d-button-label">回复</span>
+                </button>
+                <a onMousedown='showhidediv("reply-control")' tabindex="6" class="cancel" data-ember-action=""
+                data-ember-action-1593="1593">取消</a>
+
+              </div>
+                </form>
+
+              </div>
+
+
+
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="offscreen-content">
+  </div>
+
+
+  <div style="position:fixed; top:0; left:0; overflow:hidden;"><input style="position:absolute; left:-300px;"
+      type="text" value="" id="focus_retriever" readonly="true"></div>
+
+
+
+
+  
+  <script>
+  function showhidediv(id){
+     console.log('hide')
+      var sbtitle=document.getElementById(id);
+          if(sbtitle){
+              if(sbtitle.style.display=='block'){
+                  sbtitle.style.display='none'; 
+              }else{
+                  sbtitle.style.display='block';
+              }
+          }
+  }
+  </script>
+
+<script src="https://cdn.bootcss.com/marked/0.3.19/marked.min.js"></script>
+<script src="https://cdn.bootcss.com/prism/1.13.0/prism.js"></script>
+<script src="https://cdn.bootcss.com/prism/1.13.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script>
+    var e = function (sel) {
+        return document.querySelector(sel)
+    }
+
+    var es = function (sel) {
+        return document.querySelectorAll(sel)
+    }
+
+    var markContents = function () {
+        // markdown -> html 的处理放在高亮前面
+        // 因为高亮是针对 html 格式的
+        // lang -> lan422ge 不需要转 prism 自动转了
+        var contentDivs = es('.markdown-text')
+        for (var i = 0; i < contentDivs.length; i++) {
+            var contentDiv = contentDivs[i]
+            console.log('pre marked', contentDiv.textContent, contentDiv.innerHTML)
+            var content = marked(contentDiv.textContent)
+            console.log('after marked', content)
+            contentDiv.innerHTML = content
+        }
+    }
+
+    var highlight = function () {
+        // 自动加载对应的语言 不然要手动加入各个语言的 js
+        console.log('caonimama')
+        Prism.plugins.autoloader.lan422ges_path = 'https://cdn.bootcss.com/prism/1.13.0/components/'
+    }
+
+    var registerTimer = function () {
+        setInterval(function () {
+            var times = es('.422-time')
+            for (var i = 0; i < times.length; i++) {
+                var t = times[i]
+                var time = Number(t.dataset.created_time)
+                var now = Math.floor(new Date() / 1000)
+                var delta = now - time
+                var s = `${delta} 秒前`
+                t.innerText = s
+            }
+        }, 1000)
+    }
+
+    var __main = function () {
+        markContents()
+        highlight()
+        registerTimer()
+    }
+
+    __main()
+
+</script>
+
+
+
+</body>
+
+</html>
+
+

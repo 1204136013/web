@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <title>Biu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/errors.css">
+    <!-- <link rel="shortcut icon" href="https://static.zhihu.com/static/img/favicon.ico"> -->
+     <link rel="shortcut icon" href="{{ url_for('index.image', filename='favicon.ico') }}">
+    <!-- <link rel="shortcut icon" href="http://localhost:3000/images/favicon.ico"> -->
+
+  </head>
+  <body>
+    <div class="page">
+      <div class="error">
+        <!-- <h1 class="header">
+          404
+        </h1> -->
+        <div class="content">
+         <p>
+           <strong>你进到一些意料之外的地方</strong>
+         </p>
+         <p>链接是否正确？用户、话题是否存在？</p>
+         <hr>
+         <p>
+           <a href="{{ url_for('422_topic.index') }}">返回首页</a>
+           <span>或者</span>
+           <a href="{{ url_for('index.getlogin') }}">请先登录</a>
+         </p>
+       </div>
+      </div>
+    </div>
+
+
+</body></html>

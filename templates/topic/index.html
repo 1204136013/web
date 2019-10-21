@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="zh_CN" class="desktop-view not-mobile-device   js no-touch discourse-no-touch" style="">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Biu BBS</title>
+  <meta name="description" content="nothing">
+  <meta name="discourse_theme_key" content="b5b4821c-3a91-43a3-96a2-a496ce5d8392">
+  <meta name="author" content="">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+
+  <link rel="search" type="application/opensearchdescription+xml" href=""
+    title=" Search">
+
+  <meta name="csrf-param" content="authenticity_token">
+  <meta name="csrf-token"
+    content="FqCDuY5nlCszzKYyxu0oVa16KjHV4hhadT6OJGrW7CKs2jgjLhzxyqKuh30kYjlrMa5WjDqfAUSED/AhOnUX8Q==">
+
+  <meta name="fragment" content="!">
+  <link rel="shortcut icon" href="{{ url_for('index.image', filename='favicon.ico') }}">
+
+
+
+  <link href="/static/css/desktop_02b53774ef38870107942da06a1a36cf8378de13.css" media="all" rel="stylesheet"
+    data-target="desktop">
+
+
+  <link href="/static/css/desktop_theme_2_ea05f8399b16270b58b6b9c77e161d088b1f4e12.css" media="all" rel="stylesheet"
+    data-target="desktop_theme">
+
+
+
+  <style>
+    @font-face {
+      font-family: 'FontAwesome';
+      src: url('/assets/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2?http://liulishe.me&2&v=4.7.0') format('woff2'),
+        url('/assets/fontawesome-webfont-ba0c59deb5450f5cb41b3f93609ee2d0d995415877ddfa223e8a8a7533474f07.woff?http://liulishe.me&amp;2&v=4.7.0') format('woff');
+    }
+  </style>
+
+
+
+
+
+  <style id="image-sizing-hack">
+    #reply-control .d-editor-preview img:not(.thumbnail),
+    .cooked img:not(.thumbnail) {
+      max-width: 690px;
+      max-height: 500px;
+    }
+  </style>
+</head>
+
+<body class="docked navigation-topics">
+
+
+  <div class="debug-eyeline"></div>
+
+
+
+
+
+
+  <section id="main" class="ember-application">
+    <div id="ember675" class="ember-view"><span id="ember707" class="ember-view">
+        <!----></span>
+      <div id="ember719" class="ember-view">
+        <header class="d-header clearfix">
+          <div class="wrap">
+            <div class="contents clearfix">
+              <div class="title">
+                <a href="{{ url_for('index.index') }}" data-auto-route="true">
+                  <img src="/static/img/toplogo.png"
+                    alt="nothing" id="site-logo" class="logo-big">
+                  </a>
+                </div>
+              <div class="panel clearfix">
+                <span class="header-buttons">
+                    <a href="{{ url_for('index.getregister') }}">
+                        <button class="widget-button btn btn-primary btn-small sign-up-button btn-text" aria-label="注册" title="注册">
+                              <span class="d-button-label">
+                                  注册
+                                  </span>
+                        </button>
+                      </a>
+                      <a href="{{ url_for('index.getlogin') }}">
+                        <button class="widget-button btn btn-primary btn-small login-button btn-icon-text" aria-label="登录" title="登录">
+                          <!-- <i class="fa fa-user d-icon d-icon-user" aria-hidden="true"></i> -->
+                          <span class="d-button-label">登录</span>
+                        </button>
+                      </a>
+
+                </span>
+                <ul role="navigation" class="icons d-header-icons clearfix">
+                  <li class="header-dropdown-toggle"><a data-auto-route="true" title="转到另一个主题列表或分类"
+                      aria-label="转到另一个主题列表或分类" id="toggle-hamburger-menu" class="icon btn-flat">
+                      </a></li>
+                  <li id="current-user" class="header-dropdown-toggle current-user">
+                    <a href="{{ url_for('index.user_detail', name=user.username) }}" data-auto-route="true" class="icon">
+                      <div>
+                        <img alt="" width="32" height="32" src="{{ user.image }} " 
+                          title="nothing" class="avatar">
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+      <span id="ember720" class="ember-view">
+        <!----></span>
+
+      <div id="main-outlet" class="wrap" style="padding-bottom: 400px;">
+        <div class="container">
+          <div id="ember725" class="ember-view"></div>
+          <div id="ember731" class="ember-view"></div>
+          <div id="ember734" class="hidden create-topics-notice ember-view">
+            <!---->
+          </div>
+        </div>
+        <div class="container">
+          <div id="ember742" class="ember-view">
+            <div class="row">
+              <div id="banner">
+                <div id="banner-content">
+                  <p>1、文明发言,聊天灌水讨论分析热烈欢迎；</p>
+                  <p>2、目前还在测试中，有什么BUG或者建议，请发帖告诉我</p>
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="list-controls">
+          <div class="container">
+            <section id="ember751" class="navigation-container ember-view">
+              <ol id="ember760" class="category-breadcrumb ember-view">
+                <li id="ember765" class="no-category has-drop bullet ember-view"> <a href=""
+                    aria-label="显示分类列表" class="dropdown-header home" data-ember-action=""
+                    data-ember-action-768="768">帖子列表</a>
+
+                  <section class="hidden category-dropdown-menu chooser">
+                    <div class="cat"><a href="" data-drop-close="true"
+                        class="badge-category home">所有分类</a></div>
+                    <!---->
+                    <!---->
+                  </section>
+                </li>
+
+                <!---->
+                <!---->
+                <span id="ember770" class="ember-view">
+                  <!----></span>
+
+                <div class="clear"></div>
+              </ol>
+
+
+              <button onMousedown='showhidediv("reply-control")'; title="发新主题" id="create-topic" class="btn btn-default btn btn-icon-text ember-view"> 
+
+                <span class="d-button-label">发新主题</span>
+
+
+              </button>
+
+            </section>
+          </div>
+        </div>
+
+        <div id="ember803" class="ember-view">
+        </div>
+
+        <div class="container list-container ">
+          <div class="row">
+            <div class="full-width">
+              <div id="header-list-area">
+                <!---->
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="full-width">
+              <div id="list-area">
+                <span id="ember804" class="ember-view">
+                  <!----></span>
+                <!---->
+                <!---->
+                <div id="ember812" class="ember-view">
+                  <!---->
+                </div>
+
+                <div id="ember820" class="contents ember-view">
+                  <!---->
+                  <table id="ember825" class="topic-list ember-view">
+                    <thead>
+                      <tr>
+                        <th data-sort-order="default" class="default">主题</th>
+
+
+                        <th data-sort-order="posters" class="posters">用户</th>
+                        <th data-sort-order="category" class="category sortable"></th>
+
+
+                        <th data-sort-order="posts" class="posts sortable num">回复</th>
+
+                        <th data-sort-order="views" class="views sortable num">浏览</th>
+
+                        <th data-sort-order="activity" class="activity sortable num">活动</th>
+
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for t in ms %}
+                      <!-- 话题列表 -->
+                      <tr data-topic-id="18580" id="ember840" class="topic-list-item category-1 ember-view">
+                        <td class="main-link clearfix" colspan="1">
+                          <span class="link-top-line">
+
+                            <a href="{{ url_for('422_topic.detail', id=t.id) }}"
+                              class="title raw-link raw-topic-link">{{ t.title }}</a>
+
+                            <span class="topic-post-badges">
+                            </span>
+
+                          </span>
+                        </td>
+
+                        <td class="category">
+                            <a href="" data-user-card="alexxie20" class="latest single">
+                              <img
+                              alt="" width="25" height="25" src="{{ t.user().image }}"
+                              class="avatar latest single" title="话题发起者"">
+                            </a>
+                        </td>
+
+
+                        <td class="posters">
+                          <a href="" data-user-card="alexxie20" class="latest single">
+                            </a>
+                        </td>
+
+
+                        <td class="num posts-map posts heatmap-" title="这个主题有 {{ t.replies() | count }} 个回复">
+                          <a href="" class="posts-map badge-posts heatmap-">
+
+                            <span class="number">{{ t.replies() | count }}</span>
+                          </a>
+                        </td>
+
+
+                        <td class="num views "><span class="number" title="本主题已经被浏览过 {{ t.views }} 次">{{ t.views }}</span></td>
+
+                        <td class="num age activity" title="最后更新时间：{{ t.updated_time | format_time }}">
+                          <a href=""><span class="relative-date"
+                              data-time="1568572733570" data-format="tiny">{{ t.updated_time | format_time }}</span></a></td>
+
+                      </tr>
+
+
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                </div>
+                <footer class="topic-list-bottom">
+                  <div id="ember903" class="ember-view">
+                  </div>
+                  <!---->
+                </footer>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <span id="ember904" class="ember-view">
+          <!----></span>
+
+        <div id="user-card" class="show-badges no-bg ember-view">
+          <!---->
+        </div>
+
+      </div>
+
+      <span id="ember918" class="ember-view">
+        <!----></span>
+      <!----><span id="ember919" class="ember-view">
+        <!----></span>
+
+      <div data-keyboard="false" id="discourse-modal" class="hidden modal d-modal fixed-modal ember-view">
+        <div class="modal-outer-container">
+          <div class="modal-middle-container">
+            <div class="modal-inner-container">
+              <div class="modal-header">
+                <div class="modal-close">
+                  <a class="close" data-ember-action="" data-ember-action-926="926"><i
+                      class="fa fa-times d-icon d-icon-times"></i></a>
+                </div>
+
+                <h3></h3>
+              </div>
+
+              <div id="modal-alert"></div>
+
+
+              <div id="ember952" class="ember-view"></div>
+
+
+
+
+              <!---->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="topic-entrance" class="hidden ember-view"><button id="ember929"
+          class="full jump-top btn no-text ember-view">
+          <!---->
+          <!---->
+          <i class="fa fa-caret-up d-icon d-icon-caret-up"></i> Invalid date
+
+        </button>
+        <button id="ember930" class="full jump-button btn no-text ember-view">
+          <!---->
+          <!---->
+          Invalid date <i class="fa fa-caret-down d-icon d-icon-caret-down"></i>
+
+        </button></div>
+      <div id="reply-control" class="open edit-title topic ember-view" style="display:none;">
+        <div class="grippie"></div>
+        <div class="contents">
+
+          <div id="ember966" class="hidden popup-menu ember-view">
+            <h3>选项</h3>
+            <ul>
+              <!---->
+              <!---->
+              <li>
+                <button title="Hide Details" id="ember970" class="btn btn-icon-text ember-view"> <i
+                    class="fa fa-caret-right d-icon d-icon-caret-right"></i>
+
+                  <span class="d-button-label">Hide Details</span>
+
+
+                </button>
+              </li>
+              <li>
+                <button title="创建投票" id="ember972" class="btn btn-icon-text ember-view"> <i
+                    class="fa fa-bar-chart-o d-icon d-icon-bar-chart-o"></i>
+
+                  <span class="d-button-label">创建投票</span>
+
+
+                </button>
+              </li>
+
+            </ul>
+          </div>
+          <div id="ember975" class="composer-popup-container ember-view">
+            <!---->
+          </div>
+
+          <div class="control">
+            <!---->
+            <button onMousedown='showhidediv("reply-control")' title="隐藏或显示编辑面板" id="ember983" class="toggler btn-flat ember-view">
+              返回
+            </button>
+
+            <div>
+                <form id="create_topic_form" method="post" action="{{ url_for('422_topic.add', token=token) }}">
+            <div class="control-row reply-area">
+              <div class="composer-fields">
+                <div class="reply-to">
+                  创建新的主题
+                </div>
+
+                  <!--输入标题 -->
+                <div class="form-element clearfix">
+                  <div  id="ember989" class="title-input ember-view">
+                    <input name='title' maxlength="255" type="text" tabindex="2"
+                      placeholder="在这里输入标题" id="reply-title" class="ember-text-field ember-view">
+
+                    <div id="ember1006" class="popup-tip bad hide ember-view"><span class="close"><i
+                          class="fa fa-times-circle d-icon d-icon-times-circle"></i></span>标题为空</div>
+                  </div>
+
+                  <!---->
+                </div>
+          
+              </div>
+
+                  <!--输入内容 -->
+              <div id="ember1041" class="wmd-controls toolbar-visible wmd-controls show-preview ember-view"
+                style="top: 89px; bottom: 45px;">
+                <div id="ember1044" class="d-editor ember-view">
+
+                  <div class="d-editor-container">
+                    <!-- 输入类容 -->
+                    <div class="d-editor-textarea-wrapper">
+                      <textarea name='content' tabindex="4" placeholder="在此键入，请使用Markdown格式。" id="ember1088"
+                        class="d-editor-input ember-text-area ember-view"></textarea>
+                      <div id="ember1089" class="popup-tip bad hide ember-view"><span class="close"><i
+                            class="fa fa-times-circle d-icon d-icon-times-circle"></i></span>帖子不能为空</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="submit-panel">
+                <span id="ember1097" class="ember-view">
+                  <!----></span>
+                <!----> <button tabindex="5" title="或 Ctrl + 回车" id="ember1100"
+                  class="btn btn-text btn-primary create ember-view">
+                  <!---->
+                  <span class="d-button-label">创建主题</span>
+
+
+                </button>
+
+                <a  onMousedown='showhidediv("reply-control")'  tabindex="6" class="cancel" data-ember-action=""
+                  data-ember-action-1101="1101">取消</a>
+              </div>
+            </div>
+            </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="offscreen-content">
+  </div>
+
+
+
+
+
+  <div style="position:fixed; top:0; left:0; overflow:hidden;"><input style="position:absolute; left:-300px;"
+      type="text" value="" id="focus_retriever" readonly="true"></div>
+
+
+      <script lan422ge="javascript">
+          function showhidediv(id){
+          var sbtitle=document.getElementById(id);
+          if(sbtitle){
+             if(sbtitle.style.display=='block'){
+             sbtitle.style.display='none'; 
+             }else{
+             sbtitle.style.display='block';
+             }
+          }
+          }
+          </script>
+          
+</body>
+
+</html>
