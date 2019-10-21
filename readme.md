@@ -1,7 +1,7 @@
 **基于flask的论坛项目 地址 http://www.four22nd6.club**
 
 
-**todo演**
+**todo**
 ![img](https://github.com/1204136013/web/blob/master/gif/todo.gif)
 
 **注册登录**
