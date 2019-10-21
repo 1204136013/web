@@ -16,11 +16,6 @@ from models.user import User
 from routes import index
 from utils import log
 
-"""
-在 flask 中，模块化路由的功能由 蓝图（Blueprints）提供
-蓝图可以拥有自己的静态资源路径、模板路径（现在还没涉及）
-用法如下
-"""
 # 注册蓝图
 # 有一个 url_prefix 可以用来给蓝图中的每个路由加一个前缀
 # import routes.index as index_view
